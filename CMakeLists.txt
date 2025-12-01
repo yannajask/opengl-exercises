@@ -20,7 +20,12 @@ add_executable(hello_triangle
     src/glad.c
 )
 
-foreach(target hello_window hello_triangle)
+add_executable(shaders
+    src/part1/shaders.cpp
+    src/glad.c
+)
+
+foreach(target hello_window hello_triangle shaders)
     target_link_libraries(${target}
         glfw
         "-framework OpenGL"
