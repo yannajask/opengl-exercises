@@ -30,7 +30,12 @@ add_executable(textures
     src/glad.c
 )
 
-foreach(target hello_window hello_triangle shaders textures)
+add_executable(coordinates
+    src/part1/coordinates.cpp
+    src/glad.c
+)
+
+foreach(target hello_window hello_triangle shaders textures coordinates)
     target_link_libraries(${target}
         glfw
         "-framework OpenGL"
